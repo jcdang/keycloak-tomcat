@@ -19,6 +19,7 @@ public class RunTomcat
     tomcat.enableNaming();
     tomcat.setPort(TOMCAT_PORT);
     tomcat.setSilent(true);
+    tomcat.getServer().setParentClassLoader(Thread.currentThread().getContextClassLoader());
     Context ctx = tomcat.addWebapp("/auth", new File(webAppPath).getAbsolutePath());
     ctx.setConfigFile(new File(contextPath).toURI().toURL());
     tomcat.start();
