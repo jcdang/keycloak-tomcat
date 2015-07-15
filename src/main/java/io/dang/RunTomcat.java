@@ -8,10 +8,8 @@ import javax.servlet.ServletException;
 import java.io.File;
 import java.net.MalformedURLException;
 
-public class RunTomcat
-{
-  public static void main(String[] args) throws ServletException, LifecycleException, MalformedURLException
-  {
+public class RunTomcat {
+  public static void main(String[] args) throws ServletException, LifecycleException, MalformedURLException {
     final int TOMCAT_PORT = 8080;
     String webAppPath = "src/main/webapp";
     String contextPath = webAppPath + "/META-INF/context.xml";
